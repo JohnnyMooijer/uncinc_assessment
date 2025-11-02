@@ -10,13 +10,15 @@ class Article extends Model
 {
     use HasFactory;
 
-
     protected $fillable = [
         'title',
         'content',
         'image',
     ];
 
+    protected $casts = [
+        'image' => 'string',
+    ];
     protected $appends = ['image_url'];
 
     public function getImageUrlAttribute()

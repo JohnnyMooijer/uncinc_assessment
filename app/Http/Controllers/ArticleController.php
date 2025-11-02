@@ -37,7 +37,7 @@ class ArticleController extends Controller
                 $article->save();
             }
 
-            return response()->json($article, 201);
+            return response()->json($article->toArray(), 201);
         } catch (\Exception $e) {
             return response()->json([
                 'message' => 'Something went wrong',
