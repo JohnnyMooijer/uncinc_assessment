@@ -35,6 +35,15 @@ ddev start
 ```
 
 3. Zet een database op en zorg dat de juiste gegevens in de .env terecht komen
+
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db
+DB_USERNAME=db
+DB_PASSWORD=db
+```
 ```bash
 ddev phpmyadmin
 ```
