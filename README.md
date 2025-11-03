@@ -34,40 +34,31 @@ git clone https://github.com/JohnnyMooijer/uncinc_assessment.git
 ddev start
 ```
 
-3. Zet een database op en zorg dat de juiste gegevens in de .env terecht komen
-
+3. Installeer dependencies:
 ```bash
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=db
-DB_USERNAME=db
-DB_PASSWORD=db
-```
-```bash
-ddev phpmyadmin
+ddev composer i
+ddev npm i
 ```
 
-4. Installeer dependencies:
+4. Configureer sanctum settings:
 ```bash
-ddev composer install
-```
-
-5. Configureer sanctum settings:
-```bash
-ddev ssh
 ddev artisan key:generate
 ```
 
-6. Run migrations & seeders:
+5. Run migrations & seeders:
 ```bash
 ddev artisan migrate
 ddev artisan db:seed
 ```
 
+6. Link storage voor afbeeldingen:
+```bash
+ddev artisan storage:link
+```
+
 7. Build de frontend
 ```bash
-ddev npm run build
+ddev npm run dev
 ```
 8. Login met de onderstaande gegevens
 ```bash
