@@ -27,7 +27,7 @@ Functionaliteiten: login, artikelen beheer, API calls voor artikelen (CRUD).
 ### Backend
 1. Clone de repository
 ```bash
-git clone git@github.com:JohnnyMooijer/uncinc_assessment.git
+git clone https://github.com/JohnnyMooijer/uncinc_assessment.git
 ```
 2. Start het project:
 ```bash
